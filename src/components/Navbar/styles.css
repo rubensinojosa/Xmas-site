@@ -1,0 +1,105 @@
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 1.8rem;
+}
+
+.header__nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__nav li {
+    padding: 1.5rem;
+}
+
+.header__nav a {
+    padding: inherit;
+    border-radius: 8px;
+    font-weight: 500;
+    line-height: 2.4rem;
+    transition: .4s ease;
+}
+
+.header__nav a:hover {
+    background: rgba(252, 179, 157, 0.8);
+}
+
+
+/* Media query */
+@media (max-width: 800px) {
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        width: 4rem;
+        height: 3rem;
+    }
+
+    .one,
+    .two,
+    .three {
+        width: 100%;
+        height: 0.3rem;
+        margin: 0.6rem auto;
+        background-color: var(--black);
+        border-radius: 0.5rem;
+        transition-duration: .4s;
+    }
+
+    /* Fullscreen ao ser clicado */
+    .menu-section.on {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--pink);
+        z-index: 10;
+    }
+
+    .menu-section.on nav {
+        display: block;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 2rem;
+        top: 3rem;
+    }
+
+    /* Manipula a forma da primeira barra para virar um X */
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(0.7rem, 0.7rem);
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    /* Manipula a forma da primeira terceira para virar um X */
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(0.5rem, -0.7rem);
+    }
+
+    /* Itens ficam ao centro e um abaixo do outro */
+    .menu-section.on nav ul {
+        display: block;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .menu-section.on nav ul a {
+        display: block;
+        font-size: 2.5rem;
+        line-height: 4rem;
+        transition-duration: 0.5s;
+    }
+}

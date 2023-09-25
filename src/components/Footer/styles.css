@@ -1,0 +1,47 @@
+#contact {
+    background-color: var(--white);
+}
+
+#contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.5rem 1.8rem;
+}
+
+.contact__social-media {
+    display: flex;
+    gap: 4.2rem;
+}
+
+.contact__social-media-background {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 0.15rem solid var(--pink);
+    background-color: var(--pink);
+    transition: all .4s ease;
+}
+
+.contact__social-media-background:hover {
+    border: 0.15rem solid var(--red);
+}
+
+@media (max-width: 600px) {
+    .contact__brand {
+        display: none;
+    }
+
+    #contact .container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact__social-media {
+        gap: 2rem;
+    }
+}
